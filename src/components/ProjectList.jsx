@@ -1,3 +1,5 @@
+import ProjectCard from "./ProjectCard";
+
 function ProjectList({ projects }) {
   if (!projects) {
     return <p>Unable to load projects.</p>;
@@ -16,6 +18,5 @@ function ProjectList({ projects }) {
   );
 }
 
-import ProjectCard from "./ProjectCard";
 export default ProjectList;
 

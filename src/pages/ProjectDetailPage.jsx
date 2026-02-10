@@ -8,7 +8,15 @@ function ProjectDetailPage() {
 
   if (!project) {
     return (
-      <div>
+      <div
+        style={{
+          marginTop: "16px",
+          padding: "16px",
+          border: "1px solid #ddd",
+          borderRadius: "8px",
+          backgroundColor: "#fff",
+        }}
+      >
         <p>Project not found.</p>
         <Link to="/">← Back to Project List</Link>
       </div>
@@ -16,7 +24,15 @@ function ProjectDetailPage() {
   }
 
   return (
-    <div>
+    <div
+      style={{
+        marginTop: "16px",
+        padding: "16px",
+        border: "1px solid #ddd",
+        borderRadius: "8px",
+        backgroundColor: "#fff",
+      }}
+    >
       <h2>{project.projectName}</h2>
 
       <p><strong>Client:</strong> {project.clientName}</p>

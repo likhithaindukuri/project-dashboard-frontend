@@ -1,3 +1,5 @@
+import { PROJECT_STATUS } from "../types/project";
+
 function Filters({
   searchText,
   onSearchChange,
@@ -20,9 +22,9 @@ function Filters({
         style={{ padding: "6px" }}
       >
         <option value="">All Statuses</option>
-        <option value="Active">Active</option>
-        <option value="On Hold">On Hold</option>
-        <option value="Completed">Completed</option>
+        <option value={PROJECT_STATUS.ACTIVE}>{PROJECT_STATUS.ACTIVE}</option>
+        <option value={PROJECT_STATUS.ON_HOLD}>{PROJECT_STATUS.ON_HOLD}</option>
+        <option value={PROJECT_STATUS.COMPLETED}>{PROJECT_STATUS.COMPLETED}</option>
       </select>
     </div>
   );

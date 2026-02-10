@@ -11,7 +11,16 @@ function ProjectCard({ project }) {
   } = project;
 
   return (
-    <div style={{ border: "1px solid #ccc", padding: "12px", marginBottom: "12px" }}>
+    <div
+      style={{
+        border: "1px solid #ddd",
+        borderRadius: "8px",
+        padding: "12px",
+        marginBottom: "12px",
+        backgroundColor: "#fff",
+        boxShadow: "0 1px 3px rgba(0, 0, 0, 0.08)",
+      }}
+    >
       <h3>
         <Link to={`/projects/${id}`}>{projectName}</Link>
       </h3>

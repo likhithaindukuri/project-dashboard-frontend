@@ -4,7 +4,7 @@ import ProjectListPage from "./pages/ProjectListPage";
 
 function App() {
   return (
-    <div style={{ padding: "16px" }}>
+    <div style={{ padding: "16px", maxWidth: "880px", margin: "0 auto" }}>
       <h1>Project Dashboard</h1>
 
       <Routes>

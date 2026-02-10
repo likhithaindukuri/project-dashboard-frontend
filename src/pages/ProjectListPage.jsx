@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
-import { projects } from "../data/projects";
-import ProjectList from "../components/ProjectList";
 import Filters from "../components/Filters";
+import ProjectList from "../components/ProjectList";
+import { projects } from "../data/projects";
 
 function ProjectListPage() {
   const [searchText, setSearchText] = useState("");
@@ -34,8 +34,12 @@ function ProjectListPage() {
         onStatusChange={setSelectedStatus}
       />
 
-      <p style={{ marginBottom: "8px", color: "#555" }}>
+      <p style={{ marginBottom: "4px", color: "#555" }}>
         Click on a project to view detailed information.
+      </p>
+
+      <p style={{ marginBottom: "16px", color: "#777", fontSize: "14px" }}>
+        Showing {filteredProjects.length} of {projects.length} projects
       </p>
 
       <ProjectList projects={filteredProjects} />
