@@ -1,16 +1,76 @@
-# React + Vite
+📌 Project Dashboard – Frontend Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project is a simple Project Dashboard built as part of a frontend assignment.
+It simulates an internal system that lists projects, supports client-side filtering, and displays project details.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The focus of this implementation is clarity, correctness, and clean structure, rather than visual design or animations.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js
+- Vite
+- React Router
+- Plain CSS (minimal inline styling)
 
-## Expanding the ESLint configuration
+## Setup Instructions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Clone the repository:**
+
+```bash
+git clone <repository-url>
+cd project-dashboard-frontend
+```
+
+**Install dependencies:**
+
+```bash
+npm install
+```
+
+**Start the development server:**
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`.
+
+## Features Implemented
+
+- Project list view using mock data
+- Client-side filtering by:
+  - Project name or client name
+  - Project status
+  - Combined filtering without mutating original data
+- Project detail view with routing
+- Graceful handling of:
+  - Empty project list
+  - No results after filtering
+  - Long project names
+  - Missing optional fields
+
+## Extra Field
+
+An additional field `description` was added to each project.
+
+**Reason:**  
+It represents realistic project metadata and helps demonstrate handling of optional fields in the UI.
+
+## Assumptions
+
+- All data is static and client-side only
+- No backend or API integration is required
+- Project IDs are unique and stable
+- Styling is intentionally minimal
+
+## Trade-offs
+
+- State management is handled with React hooks instead of external libraries to avoid over-engineering
+- Filtering is performed on the client for simplicity
+- No pagination or advanced performance optimizations were added due to limited data size
+
+## Notes
+
+This project prioritizes maintainability, readability, and predictable state flow over visual polish.
