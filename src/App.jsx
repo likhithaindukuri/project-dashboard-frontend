@@ -1,10 +1,16 @@
+import { Route, Routes } from "react-router-dom";
+import ProjectDetailPage from "./pages/ProjectDetailPage";
 import ProjectListPage from "./pages/ProjectListPage";
 
 function App() {
   return (
     <div style={{ padding: "16px" }}>
       <h1>Project Dashboard</h1>
-      <ProjectListPage />
+
+      <Routes>
+        <Route path="/" element={<ProjectListPage />} />
+        <Route path="/projects/:id" element={<ProjectDetailPage />} />
+      </Routes>
     </div>
   );
 }
