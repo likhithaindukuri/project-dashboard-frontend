@@ -1,5 +1,8 @@
 📌 Project Dashboard – Frontend Assignment
 
+### Live Demo
+https://project-dashboard-frontend.netlify.app/
+
 ## Overview
 
 This project is a simple Project Dashboard built as part of a frontend assignment.
