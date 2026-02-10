@@ -34,6 +34,10 @@ function ProjectListPage() {
         onStatusChange={setSelectedStatus}
       />
 
+      <p style={{ marginBottom: "8px", color: "#555" }}>
+        Click on a project to view detailed information.
+      </p>
+
       <ProjectList projects={filteredProjects} />
     </div>
   );
